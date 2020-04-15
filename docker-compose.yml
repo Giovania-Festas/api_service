@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+    backend:
+        container_name: api
+        environment:
+            - DATABASE_URL=mongodb://mongo/giovaniaFestasDB
+        build: .
+        command: "yarn start"
+        ports:
+            - "8000:8000"
+        depends_on:
+            - db
+        volumes:
+            - .:/usr/app
+            - /usr/app/node_modules
+    db:
+        container_name: database
+        image: mongo
