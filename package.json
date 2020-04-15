@@ -6,8 +6,8 @@
   "author": "Leonardo Barreiros <leossb36@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "nodemon src/index.js",
-    "dev": "node src/index.js"
+    "start": "nodemon src/server.js",
+    "dev": "node src/server.js"
   },
   "dependencies": {
     "express": "^4.17.1",
