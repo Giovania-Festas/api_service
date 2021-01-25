@@ -6,7 +6,7 @@ services:
         environment:
             - DATABASE_URL=mongodb://mongo/giovaniaFestasDB
         build: .
-        command: "yarn start"
+        command: "npm start"
         ports:
             - "8000:8000"
         depends_on:

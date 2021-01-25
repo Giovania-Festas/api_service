@@ -1,19 +1,31 @@
 {
-  "name": "backend",
+  "name": "api_service",
   "version": "1.0.0",
-  "main": "index.js",
-  "repository": "https://github.com/Giovania-Festas/backend.git",
-  "author": "Leonardo Barreiros <leossb36@gmail.com>",
-  "license": "MIT",
-  "scripts": {
-    "start": "nodemon src/index.js",
-    "dev": "node src/index.js"
-  },
+  "description": "repositorio com o backend do mobile app giovania festas",
+  "main": "main.js",
   "dependencies": {
+    "axios": "^0.21.1",
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
-    "mongoose": "^5.9.9"
+    "is-directory": "^0.3.1",
+    "mongoose": "^5.11.13"
   },
   "devDependencies": {
-    "nodemon": "^2.0.3"
-  }
+    "nodemon": "^2.0.7"
+  },
+  "scripts": {
+    "start": "nodemon src/main.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Giovania-Festas/api_service.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Giovania-Festas/api_service/issues"
+  },
+  "homepage": "https://github.com/Giovania-Festas/api_service#readme"
 }

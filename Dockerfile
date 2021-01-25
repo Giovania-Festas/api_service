@@ -1,4 +1,4 @@
-ARG BASE_VERSION=12.16.2-alpine
+ARG BASE_VERSION=12.20.1-alpine
 
 FROM node:${BASE_VERSION}
 
@@ -8,4 +8,4 @@ COPY . ./
 
 EXPOSE 8000
 
-CMD yarn install
+CMD npm install
