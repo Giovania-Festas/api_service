@@ -2,20 +2,11 @@
   "name": "api_service",
   "version": "1.0.0",
   "description": "repositorio com o backend do mobile app giovania festas",
-  "main": "main.js",
-  "dependencies": {
-    "axios": "^0.21.1",
-    "dotenv": "^8.2.0",
-    "express": "^4.17.1",
-    "is-directory": "^0.3.1",
-    "mongoose": "^5.11.13"
-  },
-  "devDependencies": {
-    "nodemon": "^2.0.7"
-  },
+  "main": "index.js",
   "scripts": {
-    "start": "nodemon src/main.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "NODE_PATH=./build node build/index.js",
+    "build": "tsc -p .",
+    "dev": "nodemon src/index.ts"
   },
   "repository": {
     "type": "git",
@@ -27,5 +18,19 @@
   "bugs": {
     "url": "https://github.com/Giovania-Festas/api_service/issues"
   },
-  "homepage": "https://github.com/Giovania-Festas/api_service#readme"
+  "homepage": "https://github.com/Giovania-Festas/api_service#readme",
+  "devDependencies": {
+    "@types/express": "^4.17.12",
+    "@types/swagger-jsdoc": "^6.0.0",
+    "@types/swagger-ui-express": "^4.1.2",
+    "nodemon": "^2.0.7",
+    "ts-node": "^10.0.0",
+    "tslint": "^6.1.3",
+    "typescript": "^4.3.4"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "swagger-jsdoc": "^6.1.0",
+    "swagger-ui-express": "^4.1.6"
+  }
 }
