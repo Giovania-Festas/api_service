@@ -1,7 +1,6 @@
 import express from 'express'
 import cors from 'cors'
 import mongoConfig from './MongoConnection'
-
 import routes from '../rest/routes/routes'
 
 class App {

@@ -9,6 +9,6 @@ export default {
     apiDescription: process.env.API_DESCRIPTION || '',
     apiContactName: process.env.API_CONTACT_NAME || '',
     apiServerConnection: process.env.API_SERVERS_CONNECT || '',
-    apiMainFile: process.env.API_MAIN_FILE || '',
-    apiNodePort: process.env.NODE_PORT || ''
+    apiRoutes: process.env.API_ROUTES || './src/api/rest/routes/routes.js',
+    apiNodePort: process.env.NODE_PORT || 8000
 }
