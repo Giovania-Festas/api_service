@@ -3,8 +3,10 @@ version: '3.5'
 services:
     backend:
         container_name: api
+        env_file:
+            - .env
         environment:
-            - DATABASE_URL=mongodb://mongo/giovaniaFestasDB
+            - DATABASE_URL=$DATABASE_URL
         build:
             context: .
             dockerfile: Dockerfile

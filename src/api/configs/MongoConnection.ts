@@ -1,16 +1,17 @@
 import mongoose from 'mongoose'
-import envronment from './Envronment'
+import * as dotenv from 'dotenv'
+dotenv.config({ path: './env' })
 
 class MongoConfig {
     public connectDataBase (): void {
         const data = {
-            url: envronment.apiServerConnection,
-            port: envronment.apiNodePort,
+            url: process.env.DATABASE_URL,
             message: 'Success: Connect to DataBase'
         }
 
         try {
-            mongoose.connect(envronment.dataBaseUrl, {
+            const connection = process.env.DATABASE_URL || ''
+            mongoose.connect(connection, {
                 useNewUrlParser: true,
                 useUnifiedTopology: true,
                 useCreateIndex: true
